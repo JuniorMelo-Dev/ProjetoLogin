@@ -19,7 +19,7 @@ body {
     background-color: #fff;
     border-radius: 15px;
     width: 960px;
-    height: 50%;
+    height: 60%;
     justify-content: space-between;
     align-items: center;
     position: relative;
@@ -30,14 +30,14 @@ body {
     background-color: #58af9b;
     width: 40%;
     height: 100%;
-    border-top-left-radius: 15px ;
+    border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
 
-    left: 60%;
+    left: 0;
 }
 
 .title {
-    font-size: 20px;
+    font-size: 28px;
     font-weight: bold;
     text-transform: capitalize;
 }
@@ -77,6 +77,7 @@ body {
 .btn-primary {
     background-color: transparent;
     border: 1px solid #fff;
+    transition: background-color .5s;
 }
 .btn-primary:hover {
     background-color: #fff;
@@ -85,6 +86,7 @@ body {
 .btn-second {
     background-color: #58af9b;
     border: 1px solid #58af9b;
+    transition: background-color .5s;
 }
 .btn-second:hover {
     background-color: #fff;
@@ -94,17 +96,19 @@ body {
 
 .first-content {
     display: flex;
-    display: none;
+}
+.first-content .second-colunn {
+    z-index: 11;
 }
 
 .first-colunn {
     text-align: center;
-    flex: 1 0 auto;
+    width: 40%;
     z-index: 10;
 }
 
 .second-colunn {
-    flex: 2 0 auto;
+    width: 60%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -115,6 +119,9 @@ body {
 
 .link-social-media:not(:first-child) {
     margin-left: 10px;
+}
+.link-social-media .item-social-media {
+    transition: background-color .5s;
 }
 .link-social-media:hover  .item-social-media{
     background-color: #58af9b;
@@ -167,9 +174,11 @@ body {
 
 .second-content .first-colunn {
     order: 2;
+    z-index: -1;
 }
 .second-content .second-colunn {
     order: 1;
+    z-index: -1;
 }
 
 .password {
@@ -181,4 +190,30 @@ body {
 
 .password::first-letter {
     text-transform: capitalize;
+}
+
+.sign-in-js .first-content .first-colunn,
+.sign-in-js .first-content .second-colunn {
+    z-index: -1;
+}
+.sign-in-js .second-content .first-colunn,
+.sign-in-js .second-content .second-colunn {
+    z-index: 11;
+}
+
+.sign-in-js .content::before {
+    left: 60%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.sign-up-js .second-content .first-colunn,
+.sign-up-js .second-content .second-colunn {
+    z-index: -1;
+}
+.sign-up-js .first-content .first-colunn,
+.sign-up-js .first-content .second-colunn {
+    z-index: 11;
 }
